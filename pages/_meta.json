@@ -10,5 +10,15 @@
     "newsletter": {
         "title": "Newsletter",
         "type": "page"
+    },
+    "cookie-consent": {
+        "title": "Cookie Consent",
+        "type": "page",
+        "display": "hidden"
+    },
+    "privacy-policy": {
+        "title": "Privacy Policy",
+        "type": "page",
+        "display": "hidden"
     }
 }
