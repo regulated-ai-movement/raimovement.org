@@ -6,5 +6,9 @@
     "contribute": {
         "title": "Contribute",
         "type": "page"
+    },
+    "newsletter": {
+        "title": "Newsletter",
+        "type": "page"
     }
 }
