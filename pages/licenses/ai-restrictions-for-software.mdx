@@ -1,0 +1,93 @@
+# Artificial Intelligence Restrictions for Software (AIR-S)
+
+## About AIR-S
+
+The AI Restrictions for Software (AIR-S) is a type of software license, based on the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) and the [MIT License](https://opensource.org/licenses/MIT), that allows developers to control the use of their software from **AI Entities**. In this context, AI Entities are defined as following (extracted from the license text):
+
+> "AI Entity" or "AI Entities" shall be understood as the operational manifestation of an AI System that interacts with its environment, users, or other systems. AI Entities are the active agents, exhibiting intelligent behaviour, result of an operating AI System processing data, making decisions, or performing actions, autonomously.
+
+"The use" of the software by AI Entities is meant as any activity performed during the manifestation of their intelligent behaviour. This includes, but is not limited to, the following activities:
+
+- **Training**: the process of feeding data to an AI System to improve its performance.
+- **Learning**: the process of improving the performance of an AI System by using data.
+- **Inference**: the process of using an AI System to make decisions or perform actions.
+- **Data collection**: the process of gathering data from the environment, users, or other systems.
+- **Data processing**: the process of transforming data to improve its quality or to extract information from it.
+- **Data storage**: the process of storing data in a persistent way.
+
+📕 [Read the full licens text](https://raw.githubusercontent.com/regulated-ai-movement/artificial-intelligence-restrictions/main/air-s/license.txt)
+
+## Why AIR-S?
+
+The AIR-S license wants to address the following concerns, among others:
+- **Privacy and Security**: AI Entities can use general purpose software to process personal and sensitive data, which can identifies individuals on demand. This would be dangerous for the privacy and security of individuals.
+- **Ownership**: AI Entities typically are trained on a large set of data owned by humans and they can use general purpose software to manipulate it, included the software itself, without crediting the original authors. This can infringe copyrights, damage businesses and human creative activities.
+- **Legal Accountability**: AI Entities at the moment are not considered legal entities, therefore they are not accountable as humans. Being based on undeterministic algorithms, they can make mistakes, using general purpose software to causing damages.
+
+## How to use AIR-S?
+
+Like you would do with any other software license, you can include the AIR-S license text in your software repository, or in your software distribution, and reference it in your software documentation. You can also include the AIR-S license text in your software source code, as a comment, or in a separate file.
+
+### 1. Understand the license metadata
+
+The license metadata is the actual information that you can customize to control the use of your software pacakge from AI Entities. This is the available metadata with the relative explanation:
+
+- **ALLOW: [name or list of names of AI Entities]**<br />
+Optional, accepts a descriptive list of allowed AI Entities. For example "Example AI Assistant".<br />
+This shall enable the use of the software by the allowed AI Entities. 
+In absence of extra allowed information, the software will be fully usable without restrictions of version, source or commercial purposes.
+- **ALLOW ONLY PARTIAL: [yes]**<br />
+Optional, only valid in combination with ALLOW.<br />
+When set to "yes" this term limits the use of the Software's source code by allowed AI Entities to partial access. This means that AI Entities can use predefined code snippets for reference and must redirect users to the official author or documentation for the complete source code. The default value is "yes."
+- **ALLOW VERSION(s): [allowed version(s)]**<br />
+Optional, only valid in combination with ALLOW.<br />
+This term specifies the allowed version(s) of the Software that the AI Entities can use. It accepts semantic versioning definitions (https://semver.org/).
+- **ALLOW ONLY RESEARCH: [yes]** <br />
+Optional, only valid in combination with ALLOW. <br />
+When set to "yes" this term restricts the use of the Software by allowed AI Entities to non-commercial research and development (R&D) purposes only.
+- **ALLOW WITH CREDITS: [yes]**<br />
+Optional, only valid in combination with ALLOW.<br />
+When set to "yes" this term permits the use of the Software by allowed AI Entities only if they will provide credits to the author.
+
+
+### 2. Add the license to the software package
+
+Place the `license.txt` (or `LICENSE.TXT`) file in your software package root directory.
+
+💾 [Download the license.txt here](https://raw.githubusercontent.com/regulated-ai-movement/artificial-intelligence-restrictions/main/air-s/license.txt)
+
+### 3. Add the license to the software metadata (if any)
+
+```javascript
+{
+  "name": "my-software",
+  "version": "1.0.0",
+  "license": "AIR-S"
+  ...
+}
+```
+
+### 4. Customize the license at your needs
+
+On top of the original `license.txt` file you can customize the license metadata (see point 3) according to your needs. For example:
+
+```
+=======================================
+
+## License metadata (see section 4.1)
+
+Copyright (c) <year> <copyright holders>
+ALLOW: <name or list of names of AI Entities>
+ALLOW ONLY PARTIAL: <yes>
+ALLOW VERSION(s): <version(s) allowed to be used by the AI Entities>
+ALLOW ONLY RESEARCH: <yes>
+ALLOW WITH CREDITS: <yes>
+
+=======================================
+```
+
+## Important notes
+
+- You can use equivalently the `license.txt` or `LICENSE.TXT` file name.
+- You can use the `AIR-S` or `AIR-S License` or `air-s` or `AI Restrictions for Software` license name.
+- The version of the license is intended to be always the latest one.

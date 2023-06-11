@@ -1,4 +1,4 @@
-# Vitest
+💾# Vitest
 
 This example shows how to use [Vitest](https://github.com/vitest-dev/vitest) with Next.js.
 
