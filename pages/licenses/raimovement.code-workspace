@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../../../artificial-intelligence-restrictions"
+		},
+		{
+			"path": "../../../nextra"
 		}
 	],
 	"settings": {}
