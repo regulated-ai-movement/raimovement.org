@@ -1,9 +1,11 @@
 import { useRouter } from 'next/router'
+import { NavbarExtraContent } from './components/navbar-extra-content'
+import { NavigationIconLinks } from './shared/config'
 
 export default {
     logo: <span>{'The Regulated AI Movement'}</span>,
-    project: {
-      link: 'https://github.com/regulated-ai-movement/raimovement.org'
+    navbar: {
+      extraContent: (<NavbarExtraContent />),
     },
     search: {
       placeholder: 'Search here...',
