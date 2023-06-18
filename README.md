@@ -1,27 +1,29 @@
-💾# Vitest
+# 🌱 Raimovement.org
 
-This example shows how to use [Vitest](https://github.com/vitest-dev/vitest) with Next.js.
+This is the official repo for (raimovement.org)[https://raimovement.org]. It's based on next.js and (nextra)[https://nextra.site/].
 
-## Deploy your own
+At the moment the site and its content is statically generated and it doesn't depend on any backend or CMS system.
 
-Deploy the example using [Vercel](https://vercel.com/) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-vitest)
+## Contribute to the repo
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-vitest&project-name=with-vitest&repository-name=with-vitest)
+Any contributions are more than welcome. We follow very few general rules:
 
-## How to use
+- Stick to the conventions reelative to the technologies we use (eg. typescript, next.js, react, nextra).
+- Document your code as much as possible.
+- Provide relevant tests when possible.
+- Commit messages should be clear and concise. We are not very strict but we try to follow the (conventional commits)[https://www.conventionalcommits.org/en/v1.0.0/].
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## How to start developing
 
-```bash
-npx create-next-app --example with-vitest with-vitest-app
-```
+- `yarn install`
+- `yarn dev`
+- Go to `http://localhost:3000`
 
-```bash
-yarn create next-app --example with-vitest with-vitest-app
-```
+## Deployement process
 
-```bash
-pnpm create next-app --example with-vitest with-vitest-app
-```
+The site is hosted on [Netlify](https://www.netlify.com/). The deployment process is triggered automatically when an approved pull request is merged to the `main` branch.
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## More info
+
+- For questions requiring quick answers, join the conversation regarding development on [Discord server](https://discord.gg/SeMnHXAmb7).
+- For the rest open an issue on this repo, we'll try to answer as soon as possible.
