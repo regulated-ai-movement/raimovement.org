@@ -17,6 +17,7 @@ export default {
       )
     },
     logo: (<MainLogo width={250} title={'The Regulated AI Movement'} />),
+    primaryHue: 345,
     navbar: {
       extraContent: (<NavbarExtraContent />),
     },
