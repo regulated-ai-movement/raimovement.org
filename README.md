@@ -1,6 +1,6 @@
 # 🌱 Raimovement.org
 
-This is the official repo for (raimovement.org)[https://raimovement.org]. It's based on next.js and (nextra)[https://nextra.site/].
+This is the repo for (raimovement.org)[https://raimovement.org], The Regulated AI Movement website. It's based on next.js and (nextra)[https://nextra.site/].
 
 At the moment the site and its content is statically generated and it doesn't depend on any backend or CMS system.
 

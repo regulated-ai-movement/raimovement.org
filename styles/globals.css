@@ -14,3 +14,45 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/**
+  * Custom dark overrides
+  */
+:root {
+  --newdark-border-opacity: 0.2;
+}
+
+:is(html[class~="dark"] body),
+:is(html[class~="dark"] .dark\:nx-bg-neutral-900),
+:is(html[class~="dark"] .dark\:nx-bg-dark),
+:is(html[class~="dark"] .nextra-nav-container-blur) {
+  --tw-bg-opacity: 1;
+  background-color: rgba(26,46,69,var(--tw-bg-opacity));
+}
+
+:is(html[class~="dark"] .dark\:nx-border-neutral-800) {
+  border-color: rgba(229, 231, 235, var(--newdark-border-opacity))
+}
+
+:is(html[class~="dark"] .dark\:nx-shadow-\[0_-12px_16px_\#111\]) {
+  --tw-shadow: 0 10px 1px #111;
+}
+
+:is(html[class~="dark"] .dark\:nx-text-neutral-500) {
+  --tw-text-opacity: 1;
+  color: rgba(243,244,246,var(--tw-text-opacity));
+}
+
+:is(html[class~="dark"] .dark\:before\:nx-bg-neutral-800)::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgba(243,244,246,var(--newdark-border-opacity));
+
+}
+
+@supports (-webkit-backdrop-filter:blur(1px)) or ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  :is(html[class~="dark"] .nextra-nav-container-blur) {
+    background-color: rgba(26,46,69,var(--tw-bg-opacity))!important;
+  }
+}
+
