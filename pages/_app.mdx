@@ -1,3 +1,12 @@
 import '../styles/globals.css'
+import { CookieConsent } from '../components/cookie-consent/cookie-consent'
+import { isClient } from '../shared/utils'
 
-export default function App({ Component, pageProps }) { return <Component {...pageProps} /> }
+export default function App({ Component, pageProps }) {
+  return (
+    <>
+      <Component {...pageProps} />
+      <CookieConsent />
+    </>
+  )
+}
