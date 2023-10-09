@@ -1,14 +1,11 @@
 import { NavigationIconLinks } from "../shared/config"
-import { DiscordIcon, GitHubIcon } from "nextra/icons"
+import { GitHubIcon } from "nextra/icons"
 
 export const NavbarExtraContent = () => {
     return (
         <>
             <a href={NavigationIconLinks.GitHub} target="_blank">
                 <GitHubIcon />
-            </a>
-            <a href={NavigationIconLinks.Discord} target="_blank">
-                <DiscordIcon />
             </a>
             <a href={NavigationIconLinks.Twitter} target="_blank">
                 <svg width="24" height="24" viewBox="0 0 248 204">

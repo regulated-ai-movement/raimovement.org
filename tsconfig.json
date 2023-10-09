@@ -5,7 +5,6 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -14,11 +13,24 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "react": ["./node_modules/@types/react"],
+      "@/*": ["./*"]
+    },
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "@types/react",
+      "node",
+      "@types/jest",
+      "@testing-library/jest-dom",
+      "vitest/globals"
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.mdx", "theme.config.jsx", "*.tsx"],
+  "include": ["next-env.d.ts", "*.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "./vitest.setup.ts"],
   "exclude": ["node_modules"]
 }
