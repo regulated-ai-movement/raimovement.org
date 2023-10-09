@@ -4,3 +4,8 @@ export enum NavigationIconLinks {
     GitHub = 'https://github.com/regulated-ai-movement/raimovement.org',
     Discord = 'https://discord.gg/tckpz2scJw'
 }
+
+export enum PageLinks {
+    CookieConsent = 'cookie-consent',
+    PrivacyPolicy = 'privacy-policy'
+}
