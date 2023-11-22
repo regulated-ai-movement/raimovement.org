@@ -31,6 +31,15 @@
       "vitest/globals"
     ]
   },
-  "include": ["next-env.d.ts", "*.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "./vitest.setup.ts"],
+  "include": [
+    "next-env.d.ts",
+    "*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "./vitest.setup.ts",
+    "next.config.js", 
+    "tailwind.config.js"
+  ],
   "exclude": ["node_modules"]
 }
