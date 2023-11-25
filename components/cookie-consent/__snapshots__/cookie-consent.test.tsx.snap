@@ -6,19 +6,58 @@ exports[`CookieConsent > should render 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="shadow-lg fixed bottom-0 left-0 right-0 bg-theme-white text-theme-blue text-center p-5"
+        class="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-theme-blue bg-opacity-80"
+      >
+        <div
+          class="shadow-lg bg-theme-white text-theme-blue text-center p-10 h-auto"
+        >
+          <p>
+            Welcome 👋! Is it ok if we use cookies to improve your experience? 
+            <a
+              class="underline"
+              href="cookie-consent"
+            >
+              Read more
+            </a>
+          </p>
+          <div
+            class="flex justify-center gap-2 mt-4"
+          >
+            <button
+              class="p-2 m-2 bg-green-600 text-theme-white rounded-md"
+              value="accepted"
+            >
+              Accept
+            </button>
+            <button
+              class="p-2 m-2 border-solid border-2 border-theme-red text-theme-red rounded-md"
+              value="declined"
+            >
+              Decline
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-theme-blue bg-opacity-80"
+    >
+      <div
+        class="shadow-lg bg-theme-white text-theme-blue text-center p-10 h-auto"
       >
         <p>
-          Hello 👋, is it ok if we use cookies to improve your experience? 
+          Welcome 👋! Is it ok if we use cookies to improve your experience? 
           <a
-            class="text-theme-red hover:underline"
+            class="underline"
             href="cookie-consent"
           >
             Read more
           </a>
         </p>
         <div
-          class="flex justify-center gap-5"
+          class="flex justify-center gap-2 mt-4"
         >
           <button
             class="p-2 m-2 bg-green-600 text-theme-white rounded-md"
@@ -27,43 +66,12 @@ exports[`CookieConsent > should render 1`] = `
             Accept
           </button>
           <button
-            class="p-2 m-2 border-1 border-solid border-theme-red text-theme-red rounded-md"
+            class="p-2 m-2 border-solid border-2 border-theme-red text-theme-red rounded-md"
             value="declined"
           >
             Decline
           </button>
         </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="shadow-lg fixed bottom-0 left-0 right-0 bg-theme-white text-theme-blue text-center p-5"
-    >
-      <p>
-        Hello 👋, is it ok if we use cookies to improve your experience? 
-        <a
-          class="text-theme-red hover:underline"
-          href="cookie-consent"
-        >
-          Read more
-        </a>
-      </p>
-      <div
-        class="flex justify-center gap-5"
-      >
-        <button
-          class="p-2 m-2 bg-green-600 text-theme-white rounded-md"
-          value="accepted"
-        >
-          Accept
-        </button>
-        <button
-          class="p-2 m-2 border-1 border-solid border-theme-red text-theme-red rounded-md"
-          value="declined"
-        >
-          Decline
-        </button>
       </div>
     </div>
   </div>,

@@ -3,10 +3,15 @@ import { ConsentLabel } from './cookie-consent.definitions'
 import { fireEvent, render, screen } from '@testing-library/react'
 import { vi } from 'vitest'
 import { setCookie } from 'nextjs-cookie'
+import { updateConsent } from '../../shared/gtag'
 
 vi.mock('nextjs-cookie', () => ({
   getCookie: vi.fn(),
   setCookie: vi.fn()
+}))
+
+vi.mock('../../shared/gtag', () => ({
+  updateConsent: vi.fn()
 }))
 
 describe('CookieConsent', () => {
@@ -35,5 +40,6 @@ describe('CookieConsent', () => {
 
     expect(acceptButton).not.toBeVisible()
     expect(setCookie).toHaveBeenCalled()
+    expect(updateConsent).toHaveBeenCalled()
   })
 })
