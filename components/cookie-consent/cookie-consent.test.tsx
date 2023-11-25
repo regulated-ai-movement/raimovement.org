@@ -1,10 +1,12 @@
 import { CookieConsent } from './cookie-consent'
 import { ConsentLabel } from './cookie-consent.definitions'
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { vi } from 'vitest'
+import { setCookie } from 'nextjs-cookie'
 
 vi.mock('nextjs-cookie', () => ({
-  getCookie: vi.fn()
+  getCookie: vi.fn(),
+  setCookie: vi.fn()
 }))
 
 describe('CookieConsent', () => {
@@ -22,5 +24,16 @@ describe('CookieConsent', () => {
 
     expect(screen.getByText(ConsentLabel.Accept)).toBeVisible()
     expect(screen.getByText(ConsentLabel.Decline)).toBeVisible()
+  })
+
+  test('should disappear on click and set cookie', () => {
+    render(<CookieConsent />)
+
+    const acceptButton = screen.getByText(ConsentLabel.Accept)
+
+    fireEvent.click(acceptButton)
+
+    expect(acceptButton).not.toBeVisible()
+    expect(setCookie).toHaveBeenCalled()
   })
 })
