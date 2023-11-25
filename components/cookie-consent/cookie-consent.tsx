@@ -2,7 +2,7 @@ import { PageLinks } from '../../shared/config'
 import { getCookie, setCookie } from 'nextjs-cookie'
 import { useEffect, useState } from 'react'
 import { COOKIE_CONSENT_KEY, Consent } from './cookie-consent.definitions'
-import { updateConsent } from '@/shared/gtag'
+import { updateConsent } from '../../shared/gtag'
 
 export const CookieConsent = (): JSX.Element | null => {
   const [cookieConsent, setCookieConsent] = useState<boolean>(true)
