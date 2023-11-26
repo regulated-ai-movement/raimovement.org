@@ -1,11 +1,28 @@
-import { PageLinks } from '../../shared/config'
+import { StaticRoutes } from '../../shared/config'
 import { getCookie, setCookie } from 'nextjs-cookie'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { COOKIE_CONSENT_KEY, Consent } from './cookie-consent.definitions'
 import { updateConsent } from '../../shared/gtag'
+import { usePathname } from 'next/navigation'
 
 export const CookieConsent = (): JSX.Element | null => {
   const [cookieConsent, setCookieConsent] = useState<boolean>(true)
+  const pathname = usePathname()
+  const hideConsent =
+    pathname.includes(StaticRoutes.PrivacyPolicy) ||
+    pathname.includes(StaticRoutes.CookieConsent)
+
+  const handleClick = useCallback(
+    (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+      const consentValue = (event.target as HTMLButtonElement).value as Consent
+      setCookie(COOKIE_CONSENT_KEY, consentValue)
+      setCookieConsent(true)
+      if (consentValue === Consent.Accepted) {
+        updateConsent()
+      }
+    },
+    []
+  )
 
   useEffect(() => {
     const cookieConsent = getCookie(COOKIE_CONSENT_KEY)
@@ -16,19 +33,8 @@ export const CookieConsent = (): JSX.Element | null => {
     }
   }, [])
 
-  if (cookieConsent) {
+  if (cookieConsent || hideConsent) {
     return null
-  }
-
-  const handleClick = (
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {
-    const consentValue = (event.target as HTMLButtonElement).value as Consent
-    setCookie(COOKIE_CONSENT_KEY, consentValue)
-    setCookieConsent(true)
-    if (consentValue === Consent.Accepted) {
-      updateConsent()
-    }
   }
 
   return (
@@ -38,7 +44,7 @@ export const CookieConsent = (): JSX.Element | null => {
           {
             'Welcome 👋! Is it ok if we use cookies to improve your experience? '
           }
-          <a className="underline" href={PageLinks.CookieConsent}>
+          <a className="underline" href={StaticRoutes.CookieConsent}>
             {'Read more'}
           </a>
         </p>

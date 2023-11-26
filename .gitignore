@@ -1,3 +1,4 @@
 node_modules
 .next
 .code-workspace.json
+yarn-error.log
