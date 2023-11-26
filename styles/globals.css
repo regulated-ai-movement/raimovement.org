@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -27,7 +31,7 @@ a {
 :is(html[class~="dark"] .dark\:nx-bg-dark),
 :is(html[class~="dark"] .nextra-nav-container-blur) {
   --tw-bg-opacity: 1;
-  background-color: rgba(26,46,69,var(--tw-bg-opacity));
+  background-color: rgba(26, 46, 69, var(--tw-bg-opacity));
 }
 
 :is(html[class~="dark"] .dark\:nx-border-neutral-800) {
@@ -55,4 +59,3 @@ a {
     background-color: rgba(26,46,69,var(--tw-bg-opacity))!important;
   }
 }
-
