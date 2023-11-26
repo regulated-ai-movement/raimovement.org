@@ -4,6 +4,8 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import { vi } from 'vitest'
 import { setCookie } from 'nextjs-cookie'
 import { updateConsent } from '../../shared/gtag'
+import { StaticRoutes } from '../../shared/config'
+import { usePathname } from 'next/navigation'
 
 vi.mock('nextjs-cookie', () => ({
   getCookie: vi.fn(),
@@ -12,6 +14,10 @@ vi.mock('nextjs-cookie', () => ({
 
 vi.mock('../../shared/gtag', () => ({
   updateConsent: vi.fn()
+}))
+
+vi.mock('next/navigation', () => ({
+  usePathname: vi.fn(() => 'other-route')
 }))
 
 describe('CookieConsent', () => {
@@ -41,5 +47,15 @@ describe('CookieConsent', () => {
     expect(acceptButton).not.toBeVisible()
     expect(setCookie).toHaveBeenCalled()
     expect(updateConsent).toHaveBeenCalled()
+  })
+
+  test('should disappear on privacy and terms pages', () => {
+    vi.mocked(usePathname).mockReturnValue(`/${StaticRoutes.CookieConsent}`)
+
+    render(<CookieConsent />)
+
+    const acceptButton = screen.queryByText(ConsentLabel.Accept)
+
+    expect(acceptButton).toBeNull()
   })
 })
