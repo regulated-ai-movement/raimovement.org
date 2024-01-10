@@ -1,4 +1,4 @@
-export const GA_TRACKING_ID = 'G-DGYJQYJRNW' //replace it with your measurement id
+export const GA_TRACKING_ID = 'G-DGYJQYJRNW'
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url: string) => {
@@ -15,6 +15,8 @@ interface EventArguments {
   value: string
 }
 
+type AnalyticsStorage = 'granted' | 'denied'
+
 export const event = ({ action, category, label, value }: EventArguments) => {
   window.gtag('event', action, {
     event_category: category,
@@ -23,8 +25,8 @@ export const event = ({ action, category, label, value }: EventArguments) => {
   })
 }
 
-export const updateConsent = () => {
+export const updateConsent = (value: AnalyticsStorage) => {
   window.gtag('consent', 'update', {
-    analytics_storage: 'granted'
+    analytics_storage: value
   })
 }
