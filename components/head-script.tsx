@@ -1,6 +1,14 @@
 import Script from 'next/script'
+import { COOKIE_CONSENT_KEY, Consent } from './cookie-consent/cookie-consent.definitions'
+import { getCookie } from 'nextjs-cookie'
 
-export const HeadScript = (trackingID: string) => {
+interface HeadScriptProps {
+  trackingID: string
+}
+
+export const HeadScript = ({ trackingID }: HeadScriptProps) => {
+  const cookieConsent = getCookie(COOKIE_CONSENT_KEY);
+  const analyticsStorage = cookieConsent === Consent.Accepted ? 'granted' : 'denied';
   return (
     <>
       <Script
@@ -16,7 +24,7 @@ export const HeadScript = (trackingID: string) => {
           gtag('js', new Date());
           gtag('config', '${trackingID}');
           gtag('consent', 'default', {
-            'analytics_storage': 'denied'
+            'analytics_storage': '${analyticsStorage}'
           });
         `}
       </Script>

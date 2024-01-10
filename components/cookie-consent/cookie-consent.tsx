@@ -18,7 +18,7 @@ export const CookieConsent = (): JSX.Element | null => {
       setCookie(COOKIE_CONSENT_KEY, consentValue)
       setCookieConsent(true)
       if (consentValue === Consent.Accepted) {
-        updateConsent()
+        updateConsent('granted')
       }
     },
     []
