@@ -28,7 +28,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jsdom": "^19.0.0",
-    "next": "latest",
+    "next": "^14.1.0",
     "nextjs-cookie": "^1.0.6",
     "nextra": "^2.5.2",
     "nextra-theme-docs": "^2.5.2",
