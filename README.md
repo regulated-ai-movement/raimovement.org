@@ -1,8 +1,8 @@
 # 🌱 Raimovement.org
 
-This is the repo for (raimovement.org)[https://raimovement.org], The Regulated AI Movement website. It's based on next.js and (nextra)[https://nextra.site/].
+This is the repo for [raimovement.org](https://raimovement.org), The Regulated AI Movement website. It's based on next.js and [nextjs-notion-starter-kit](https://github.com/transitive-bullshit/nextjs-notion-starter-kit).
 
-At the moment the site and its content is statically generated and it doesn't depend on any backend or CMS system.
+At the moment the site and its content is statically generated and it depends on Notion as CMS.
 
 ## Contribute to the repo
 
@@ -11,17 +11,13 @@ Any contributions are more than welcome. We follow very few general rules:
 - Stick to the conventions reelative to the technologies we use (eg. typescript, next.js, react, nextra).
 - Document your code as much as possible.
 - Provide relevant tests when possible.
-- Commit messages should be clear and concise. We are not very strict but we try to follow the (conventional commits)[https://www.conventionalcommits.org/en/v1.0.0/].
+- Commit messages should be clear and concise. We are not very strict but we try to follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 ## How to start developing
 
-- `yarn install`
-- `yarn dev`
+- `pnpm install`
+- `pnpm run dev`
 - Go to `http://localhost:3000`
-
-## Deployement process
-
-The site is hosted on [Netlify](https://www.netlify.com/). The deployment process is triggered automatically when an approved pull request is merged to the `main` branch.
 
 ## More info
 

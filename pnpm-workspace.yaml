@@ -1,0 +1,7 @@
+onlyBuiltDependencies:
+  - sharp
+  - simple-git-hooks
+
+enablePrePostScripts: true
+
+packageManagerStrict: false
