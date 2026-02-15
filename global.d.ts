@@ -1,7 +1,0 @@
-import './node_modules/@testing-library/jest-dom/extend-expect'
-
-declare global {
-  interface Window {
-    gtag: any
-  }
-}
