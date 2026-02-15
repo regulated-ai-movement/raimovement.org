@@ -1,4 +1,4 @@
-import { type ExtendedRecordMap } from 'notion-types'
+import { type Block, type ExtendedRecordMap } from 'notion-types'
 import { getBlockTitle, parsePageId, uuidToId } from 'notion-utils'
 
 import { includeNotionIdInUrls } from './config'
@@ -14,7 +14,8 @@ function isDraftPage(pageId: string, recordMap: ExtendedRecordMap): boolean {
   const pageUuid = parsePageId(pageId, { uuid: true })
   if (!pageUuid) return false
 
-  const block = recordMap.block[pageUuid]?.value
+  const blockValue = recordMap.block[pageUuid]?.value
+  const block = (blockValue && 'type' in blockValue ? blockValue : (blockValue as any)?.value) as Block | undefined
   if (!block) return false
 
   const title = getBlockTitle(block, recordMap)

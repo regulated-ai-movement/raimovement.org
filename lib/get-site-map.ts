@@ -4,6 +4,7 @@ import {
   getPageTitle,
   uuidToId
 } from 'notion-utils'
+import type { Block } from 'notion-types'
 import pMemoize from 'p-memoize'
 
 import type * as types from './types'
@@ -65,7 +66,8 @@ async function getAllPagesImpl(
         throw new Error(`Error loading page "${pageId}"`)
       }
 
-      const block = recordMap.block[pageId]?.value
+      const blockValue = recordMap.block[pageId]?.value
+      const block = (blockValue && 'type' in blockValue ? blockValue : (blockValue as any)?.value) as Block | undefined
       if (
         !(getPageProperty<boolean | null>('Public', block!, recordMap) ?? true)
       ) {

@@ -1,4 +1,4 @@
-import { type ExtendedRecordMap } from 'notion-types'
+import { type Block, type ExtendedRecordMap } from 'notion-types'
 import { getBlockTitle, getPageTitle, parsePageId } from 'notion-utils'
 
 import type { PageProps } from './types'
@@ -13,7 +13,8 @@ function isDraftPageBlock(
   blockId: string,
   recordMap: ExtendedRecordMap
 ): boolean {
-  const block = recordMap.block[blockId]?.value
+  const blockValue = recordMap.block[blockId]?.value
+  const block = (blockValue && 'type' in blockValue ? blockValue : (blockValue as any)?.value) as Block | undefined
   if (!block) return false
 
   // Check if it's a page block or a link to a page
@@ -23,6 +24,15 @@ function isDraftPageBlock(
   }
 
   return false
+}
+
+// Extract the actual Block from a NotionMapBox value, which can be either
+// Block directly or { role, value: Block }
+function extractBlock(value: unknown): Block | undefined {
+  if (!value || typeof value !== 'object') return undefined
+  if ('type' in (value as any)) return value as Block
+  if ('value' in (value as any)) return (value as any).value as Block
+  return undefined
 }
 
 // Filter out draft page blocks from the recordMap
@@ -44,7 +54,7 @@ function filterDraftPages(recordMap: ExtendedRecordMap): ExtendedRecordMap {
     }
 
     // Clone the block and filter out draft references from content
-    const block = blockData?.value
+    const block = extractBlock(blockData?.value)
     if (block?.content) {
       const filteredContent = block.content.filter(
         (childId: string) => !draftBlockIds.has(childId)
@@ -55,7 +65,7 @@ function filterDraftPages(recordMap: ExtendedRecordMap): ExtendedRecordMap {
           ...block,
           content: filteredContent
         }
-      }
+      } as any
     } else {
       filteredBlocks[blockId] = blockData
     }
