@@ -29,10 +29,6 @@
   line-height: 1.65;
 }
 
-.index-page {
-  --notion-max-width: 900px;
-}
-
 .notion-text {
   padding: 0.5em 2px;
 }
