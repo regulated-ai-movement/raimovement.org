@@ -94,8 +94,8 @@ importers:
         specifier: ^25.2.3
         version: 25.2.3
       '@types/prismjs':
-        specifier: ^1.26.5
-        version: 1.26.5
+        specifier: ^1.26.6
+        version: 1.26.6
       '@types/react':
         specifier: ^19.2.14
         version: 19.2.14
@@ -672,8 +672,8 @@ packages:
   '@types/node@25.2.3':
     resolution: {integrity: sha512-m0jEgYlYz+mDJZ2+F4v8D1AyQb+QzsNqRuI7xg1VQX/KlKS0qT9r1Mo16yo5F/MtifXFgaofIFsdFMox2SxIbQ==}
 
-  '@types/prismjs@1.26.5':
-    resolution: {integrity: sha512-AUZTa7hQ2KY5L7AmtSiqxlhWxb4ina0yd8hNbl4TWuqnv/pFP0nDMb3YrfSBf4hJVGLh2YEIBfKaBW/9UEl6IQ==}
+  '@types/prismjs@1.26.6':
+    resolution: {integrity: sha512-vqlvI7qlMvcCBbVe0AKAb4f97//Hy0EBTaiW8AalRnG/xAN5zOiWWyrNqNXeq8+KAuvRewjCVY1+IPxk4RdNYw==}
 
   '@types/react-body-classname@1.1.10':
     resolution: {integrity: sha512-BS5V6xbn9m76WA13ied9xYXVacIf70/alT4AfPNiJmyAJy3LnmPCFSI31aS67DeVvekVLidXhmmk42Z0272N7g==}
@@ -3019,7 +3019,7 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
 
-  '@types/prismjs@1.26.5': {}
+  '@types/prismjs@1.26.6': {}
 
   '@types/react-body-classname@1.1.10':
     dependencies:
