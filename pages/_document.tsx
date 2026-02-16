@@ -1,4 +1,4 @@
-import { IconContext } from '@react-icons/all-files'
+import { IconContext } from 'react-icons'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 export default class MyDocument extends Document {
