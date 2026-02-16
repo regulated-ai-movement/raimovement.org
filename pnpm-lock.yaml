@@ -12,8 +12,8 @@ importers:
         specifier: ^2.4.0
         version: 2.4.0(react@19.2.4)
       '@keyvhq/core':
-        specifier: ^1.6.9
-        version: 1.6.26
+        specifier: ^2.1.15
+        version: 2.1.15
       '@keyvhq/redis':
         specifier: ^1.6.10
         version: 1.6.28
@@ -570,9 +570,9 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@keyvhq/core@1.6.26':
-    resolution: {integrity: sha512-0jy/fOVCYdo3MImM3yjdHuFZNkycPmEAq0v+UGt0dRltnXccgQ+7vCdCNbLpgP3688g5Mw8L+0vcRt5MK53UPA==}
-    engines: {node: '>= 14'}
+  '@keyvhq/core@2.1.15':
+    resolution: {integrity: sha512-YPc/vUECeKkWj1XSVT7ts7BQzU62RITjfru/Ft9uc+n2W0rm5mxTWzG51IK81g27+JrW+jI3OCUgNaeMCjTAMg==}
+    engines: {node: '>= 18'}
 
   '@keyvhq/redis@1.6.28':
     resolution: {integrity: sha512-krF2d1smWf4JUm26DUjwhucMCw+OVTCleg94jJdDZQPvM291FI/8B6B9K1TxiN+cZDk0MBPZmWMIY+2nAhn/gA==}
@@ -2949,7 +2949,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@keyvhq/core@1.6.26':
+  '@keyvhq/core@2.1.15':
     dependencies:
       json-buffer: 3.0.1
 
