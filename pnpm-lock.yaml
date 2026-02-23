@@ -72,8 +72,8 @@ importers:
         specifier: ^5.5.0
         version: 5.5.0(react@19.2.4)
       react-notion-x:
-        specifier: ^7.8.1
-        version: 7.8.1(@babel/runtime@7.28.4)(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: ^7.8.2
+        version: 7.8.2(@babel/runtime@7.28.4)(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react-tweet:
         specifier: ^3.3.0
         version: 3.3.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -1011,8 +1011,8 @@ packages:
   caniuse-lite@1.0.30001770:
     resolution: {integrity: sha512-x/2CLQ1jHENRbHg5PSId2sXq1CIO1CISvwWAj027ltMVG2UNgW+w9oH2+HzgEIRFembL8bUlXtfbBHR1fCg2xw==}
 
-  canvas@3.2.0:
-    resolution: {integrity: sha512-jk0GxrLtUEmW/TmFsk2WghvgHe8B0pxGilqCL21y8lHkPUGa6FTsnCNtHPOzT8O3y+N+m3espawV80bbBlgfTA==}
+  canvas@3.2.1:
+    resolution: {integrity: sha512-ej1sPFR5+0YWtaVp6S1N1FVz69TQCqmrkGeRvQxZeAB1nAIcjNTHVwrZtYtWFFBmQsF40/uDLehsW5KuYC99mg==}
     engines: {node: ^18.12.0 || >= 20.9.0}
 
   chalk@4.1.2:
@@ -1813,6 +1813,10 @@ packages:
     resolution: {integrity: sha512-MMbFhJzh4Jlg/poq1si90XRlTZRDHVqdlz2mPyGJ6kqMpyHUyVpDd5gpFAvVehW64+RA1eKE9Yt8aSLY7w2Kgg==}
     engines: {node: '>=18'}
 
+  memoize@10.2.0:
+    resolution: {integrity: sha512-DeC6b7QBrZsRs3Y02A6A7lQyzFbsQbqgjI6UW0GigGWV+u1s25TycMr0XHZE4cJce7rY/vyw2ctMQqfDkIhUEA==}
+    engines: {node: '>=18'}
+
   memorystream@0.3.1:
     resolution: {integrity: sha512-S3UwM3yj5mtUSEfP41UZmt/0SCoVYUcU1rkXv+BQ5Ig8ndL4sPoJNBUJERafdPb5jjHJGuMgytgKvKIf58XNBw==}
     engines: {node: '>= 0.10.0'}
@@ -1895,8 +1899,8 @@ packages:
       sass:
         optional: true
 
-  node-abi@3.78.0:
-    resolution: {integrity: sha512-E2wEyrgX/CqvicaQYU3Ze1PFGjc4QYPGsjUrlYkqAE0WjHEZwgOsGMPMzkMse4LjJbDmaEuDX3CM036j5K2DSQ==}
+  node-abi@3.87.0:
+    resolution: {integrity: sha512-+CGM1L1CgmtheLcBuleyYOn7NWPVu0s0EJH2C4puxgEZb9h8QpR9G2dBfZJOAUhi7VQxuBPMd0hiISWcTyiYyQ==}
     engines: {node: '>=10'}
 
   node-addon-api@7.1.1:
@@ -1915,6 +1919,10 @@ packages:
     resolution: {integrity: sha512-X06Mfd/5aKsRHc0O0J5CUedwnPmnDtLF2+nq+KN9KSDlJHkPuh0JUviWjEWMe0SW/9TDdSLVPuk7L5gGTIA1/w==}
     engines: {node: '>=14.16'}
 
+  normalize-url@8.1.1:
+    resolution: {integrity: sha512-JYc0DPlpGWB40kH5g07gGTrYuMqV653k3uBKY6uITPWds3M0ov3GaWGp9lbE3Bzngx8+XkfzgvASb9vk9JDFXQ==}
+    engines: {node: '>=14.16'}
+
   notion-client@7.8.1:
     resolution: {integrity: sha512-gfgpXiR1urhckDglaOWTF4lXPF3CeZhg1NwF21r4Q07kVmaXs8g5AIbMXajTxoCm6s19mfmxXxo3qlIfA+D0ig==}
     engines: {node: '>=18'}
@@ -1923,8 +1931,16 @@ packages:
     resolution: {integrity: sha512-HuWcZbgI778Fr7qIBuUi3ejE2su5Kx0imTZVtICcIfvTkomDEZsbfhKzww2D1VJaUD5fQSyKo7qFuc/Kv7ufow==}
     engines: {node: '>=18'}
 
+  notion-types@7.8.2:
+    resolution: {integrity: sha512-AB0+Dl75NuDB/ZLFpFvdtTAb0Gc4reY5py0mXu/st2w15ezna37gyaAB1fEeCiimWpM02JIH3PILK5N7XlfuAg==}
+    engines: {node: '>=18'}
+
   notion-utils@7.8.1:
     resolution: {integrity: sha512-mbMJLOrHB/oPf65CLUR7s5dJjQtKThj3RvvAo3L2kUVTHuT3cbjdfy4xqxuYsGhsIGNSIsvSpeUqN3D4q2KGsw==}
+    engines: {node: '>=18'}
+
+  notion-utils@7.8.2:
+    resolution: {integrity: sha512-7xxiqF1803Zn9eW6J+XbjR4YMNdZt2en5HuwQcNnbLF0IN/qFnF3zssBVxBWuMNh15q8W1/EQzFmQwZtp1iPPQ==}
     engines: {node: '>=18'}
 
   npm-normalize-package-bin@4.0.0:
@@ -2070,6 +2086,7 @@ packages:
   prebuild-install@7.1.3:
     resolution: {integrity: sha512-8Mf2cbV7x1cXPUILADGI3wuhfqWvtiLA1iclTDbFRZkgRQS0NqsPZphna9V+HyTEadheuPmjaJMsbzKQFOzLug==}
     engines: {node: '>=10'}
+    deprecated: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
     hasBin: true
 
   prelude-ls@1.2.1:
@@ -2156,8 +2173,8 @@ packages:
       react: ^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18 || ^19
       react-dom: ^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18 || ^19
 
-  react-notion-x@7.8.1:
-    resolution: {integrity: sha512-z9Uju/pqABA9/DJDLybdhvWR3qz1qXjsPP5JSUPdqzy7FiByMHeHGq1fLYiUXaOowitIy2FH5oYkqyZ79lrpMA==}
+  react-notion-x@7.8.2:
+    resolution: {integrity: sha512-saUUZfw2Y0yaFXq2eqQ8xD3pYcyXRSfyLEARz96Io+gG70nYeraKu+uS3hYzCXuG+uFz4HYKji2l2uoDgJOVOw==}
     engines: {node: '>=18'}
     peerDependencies:
       react: '>=18'
@@ -2294,6 +2311,11 @@ packages:
 
   semver@7.7.3:
     resolution: {integrity: sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==}
+    engines: {node: '>=10'}
+    hasBin: true
+
+  semver@7.7.4:
+    resolution: {integrity: sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -3510,7 +3532,7 @@ snapshots:
 
   caniuse-lite@1.0.30001770: {}
 
-  canvas@3.2.0:
+  canvas@3.2.1:
     dependencies:
       node-addon-api: 7.1.1
       prebuild-install: 7.1.3
@@ -4428,6 +4450,10 @@ snapshots:
     dependencies:
       mimic-function: 5.0.1
 
+  memoize@10.2.0:
+    dependencies:
+      mimic-function: 5.0.1
+
   memorystream@0.3.1: {}
 
   merge-refs@1.3.0(@types/react@19.2.14):
@@ -4506,9 +4532,9 @@ snapshots:
       - '@babel/core'
       - babel-plugin-macros
 
-  node-abi@3.78.0:
+  node-abi@3.87.0:
     dependencies:
-      semver: 7.7.3
+      semver: 7.7.4
     optional: true
 
   node-addon-api@7.1.1:
@@ -4522,6 +4548,8 @@ snapshots:
 
   normalize-url@8.1.0: {}
 
+  normalize-url@8.1.1: {}
+
   notion-client@7.8.1:
     dependencies:
       notion-types: 7.8.1
@@ -4531,12 +4559,22 @@ snapshots:
 
   notion-types@7.8.1: {}
 
+  notion-types@7.8.2: {}
+
   notion-utils@7.8.1:
     dependencies:
       is-url-superb: 6.1.0
       memoize: 10.1.0
       normalize-url: 8.1.0
       notion-types: 7.8.1
+      p-queue: 8.1.1
+
+  notion-utils@7.8.2:
+    dependencies:
+      is-url-superb: 6.1.0
+      memoize: 10.2.0
+      normalize-url: 8.1.1
+      notion-types: 7.8.2
       p-queue: 8.1.1
 
   npm-normalize-package-bin@4.0.0: {}
@@ -4659,7 +4697,7 @@ snapshots:
 
   pdfjs-dist@4.8.69:
     optionalDependencies:
-      canvas: 3.2.0
+      canvas: 3.2.1
       path2d: 0.2.2
     optional: true
 
@@ -4707,7 +4745,7 @@ snapshots:
       minimist: 1.2.8
       mkdirp-classic: 0.5.3
       napi-build-utils: 2.0.0
-      node-abi: 3.78.0
+      node-abi: 3.87.0
       pump: 3.0.3
       rc: 1.2.8
       simple-get: 4.0.1
@@ -4808,13 +4846,13 @@ snapshots:
       react-lifecycles-compat: 3.0.4
       warning: 4.0.3
 
-  react-notion-x@7.8.1(@babel/runtime@7.28.4)(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+  react-notion-x@7.8.2(@babel/runtime@7.28.4)(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
       '@fisch0920/medium-zoom': 1.0.7
       '@matejmazur/react-katex': 3.1.3(katex@0.16.21)(react@19.2.4)
       katex: 0.16.21
-      notion-types: 7.8.1
-      notion-utils: 7.8.1
+      notion-types: 7.8.2
+      notion-utils: 7.8.2
       prismjs: 1.30.0
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
@@ -4990,6 +5028,9 @@ snapshots:
   semver@7.6.3: {}
 
   semver@7.7.3: {}
+
+  semver@7.7.4:
+    optional: true
 
   set-function-length@1.2.2:
     dependencies:
