@@ -38,7 +38,7 @@
     "ky": "^1.14.3",
     "lqip-modern": "^2.2.1",
     "next": "^16.1.6",
-    "notion-client": "^7.8.1",
+    "notion-client": "^7.8.2",
     "notion-types": "^7.8.1",
     "notion-utils": "^7.8.1",
     "p-map": "^7.0.4",
